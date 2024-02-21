@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace SistemaGestionBussiness.services
 {
-    internal class Class1
-    {
+    
+    
         public static class UserBussiness
         {
             public static List<User> ObtenerUsers()
@@ -33,5 +33,5 @@ namespace SistemaGestionBussiness.services
                 UserData.EliminarUser(id);
             }
         }
-    }
+    
 }
