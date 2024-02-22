@@ -97,16 +97,16 @@ namespace SistemaGestionData.Data
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string insertQuery = "insert into _User (Name, lastName, Nickname, Password, Mail, InfusionFavorita) " +
-                                     "values (@Nombre, @Apellido, @Nickname, @Password, @Mail, @InfusionFavorita)";
+                string insertQuery = "insert into _user (Name, lastName, password, email, UserName, ) " +
+                                     "values (@Name, @lastName,  @password, @email, @UserName )";
                 using SqlCommand command = new SqlCommand(insertQuery, connection);
 
-                command.Parameters.AddWithValue("@Nombre", usuario.id);
-                command.Parameters.AddWithValue("@Nombre", usuario.Name);
-                command.Parameters.AddWithValue("@Apellido", usuario.lastName);
-                command.Parameters.AddWithValue("@Nickname", usuario.password);
-                command.Parameters.AddWithValue("@Password", usuario.email);
-                command.Parameters.AddWithValue("@Mail", usuario.username);
+               
+                command.Parameters.AddWithValue("@Name", usuario.Name);
+                command.Parameters.AddWithValue("@lastname", usuario.lastName);
+                command.Parameters.AddWithValue("@password", usuario.password);
+                command.Parameters.AddWithValue("@email", usuario.email);
+                command.Parameters.AddWithValue("@UserName", usuario.username);
 
 
                 try

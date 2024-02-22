@@ -14,7 +14,7 @@ namespace SistemaGestionData.data
     {
         public static string connectionString = @"Server=localhost\SQLEXPRESS;Database=ferreteria_axel;Trusted_Connection=true;TrustServerCertificate=True";
         // Cadena de conexión a la db bd
-        public static List<SistemaGestionEntities.Models.Product> ListarProductos()
+        public static List<SistemaGestionEntities.Models.Product> ObtenerProductos()
         {
             List<Product> productos = new List<Product>();
 

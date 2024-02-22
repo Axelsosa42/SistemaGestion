@@ -14,7 +14,7 @@ namespace SistemaGestionBussiness.services
     {
         public static List<Product> ObtenerProductos()
         {
-            return ProductData.ListarProductos();
+            return ProductData.ObtenerProductos();
         }
         public static Product ObtenerProducto(int id) => ProductData.ObtenerProducto(id);
 
